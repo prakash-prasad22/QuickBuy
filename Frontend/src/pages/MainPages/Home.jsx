@@ -44,7 +44,7 @@ const Home = () => {
       <div className='text-sm lg:text-lg font-bold text-center mt-6'>Need it ASAP? Our Quick Delivery Has You Covered ..</div>
       <div className='text-md lg:text-[22px] font-bold text-center mt-4'>Shop what you want by Category ... We deliver them at your doorstep in minutes </div>
       
-      <div className='container mx-auto mt-2 md:mt-8 px-0 md:px-4 my-2 grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7  lg:gap-2'>
+      <div className='container mx-auto mt-2 md:mt-8 px-0 md:px-4 my-2 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7  lg:gap-2'>
           {
             loadingCategory ? (
               new Array(12).fill(null).map((c,index)=>{
