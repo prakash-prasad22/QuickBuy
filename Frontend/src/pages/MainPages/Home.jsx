@@ -5,6 +5,8 @@ import CategoryWiseProductDisplay from '../../components/QuickDeliveryproducts/C
 import HomeBanner from '../../components/MainPages/HomeBanner'
 import CategoryWiseSubCategories from '../../components/StandardDeliveryProducts/CategoryWiseSubCategories'
 import topPicks from '../../assets/Top picks.webp'
+import { FcLowBattery } from "react-icons/fc";
+
 
 
 const Home = () => {
