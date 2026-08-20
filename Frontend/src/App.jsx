@@ -57,7 +57,7 @@ function App() {
 
   
   useEffect(()=>{
-    //fetchUser()
+    fetchUser()
     fetchCategory()
     fetchSubCategory()
     // fetchCartItem()

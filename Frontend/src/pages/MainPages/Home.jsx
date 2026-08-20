@@ -5,7 +5,7 @@ import CategoryWiseProductDisplay from '../../components/QuickDeliveryproducts/C
 import HomeBanner from '../../components/MainPages/HomeBanner'
 import CategoryWiseSubCategories from '../../components/StandardDeliveryProducts/CategoryWiseSubCategories'
 import topPicks from '../../assets/Top picks.webp'
-
+import { FcLowBattery } from "react-icons/fc";
 
 const Home = () => {
   const loadingCategory = useSelector(state => state.product.loadingCategory)
@@ -37,7 +37,20 @@ const Home = () => {
    <section className='bg-white mt-0'>
 
     <div >
-      <HomeBanner />
+      {
+        loadingCategory ? (
+          <div className="w-full h-[100px] md:h-[150px] p-8 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+          <FcLowBattery className="mr-2 animate-pulse text-yellow-500" size={80} />
+          <span className="text-[14px] md:text-[22px] text-center text-gray-700 dark:text-gray-300 animate-pulse">
+            The backend service for this application is hosted on Render's free tier. Service startup times may vary, so
+            please allow a few moments for full functionality to become available. Thank you for your patience.
+          </span>
+        </div>
+        ) : (
+          <HomeBanner />
+        )
+      }
+      
     </div>
 
     <div className='mt-5 px-4'>
