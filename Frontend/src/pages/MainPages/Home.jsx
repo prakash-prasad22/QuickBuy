@@ -7,6 +7,8 @@ import CategoryWiseSubCategories from '../../components/StandardDeliveryProducts
 import topPicks from '../../assets/Top picks.webp'
 import { FcLowBattery } from "react-icons/fc";
 
+
+
 const Home = () => {
   const loadingCategory = useSelector(state => state.product.loadingCategory)
   const categoryData = useSelector(state => state.product.allCategory)
@@ -42,7 +44,7 @@ const Home = () => {
           <div className="w-full h-[100px] md:h-[150px] p-8 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 flex items-center justify-center">
           <FcLowBattery className="mr-2 animate-pulse text-yellow-500" size={80} />
           <span className="text-[14px] md:text-[22px] text-center text-gray-700 dark:text-gray-300 animate-pulse">
-            The backend service for this application is hosted on Render's free tier. Service startup times may vary, so
+            The backend service for this application is hosted on Render's free tier. Service startup times may vary (2-4 minutes) , so
             please allow a few moments for full functionality to become available. Thank you for your patience.
           </span>
         </div>
@@ -50,14 +52,13 @@ const Home = () => {
           <HomeBanner />
         )
       }
-      
     </div>
 
     <div className='mt-5 px-4'>
       <div className='text-sm lg:text-lg font-bold text-center mt-6'>Need it ASAP? Our Quick Delivery Has You Covered ..</div>
       <div className='text-md lg:text-[22px] font-bold text-center mt-4'>Shop what you want by Category ... We deliver them at your doorstep in minutes </div>
       
-      <div className='container mx-auto mt-2 md:mt-8 px-0 md:px-4 my-2 grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7  lg:gap-2'>
+      <div className='container mx-auto mt-2 md:mt-8 px-0 md:px-4 my-2 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7  lg:gap-2'>
           {
             loadingCategory ? (
               new Array(12).fill(null).map((c,index)=>{
